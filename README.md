@@ -1,5 +1,6 @@
 # Exercises
 
 ## Dynamic Programming
-* Ugly Numbers: [https://www.geeksforgeeks.org/ugly-numbers/](https://www.geeksforgeeks.org/ugly-numbers/)
+* KD-Tree:
+This implementation of the KD-Tree performs the following operations: building a tree, inserting into a tree, and finding the nearest neighbor to a point.
 
