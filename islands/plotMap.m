@@ -20,6 +20,8 @@ scatter(shortest_path(:,2), shortest_path(:,1), 50, 'filled', 'm');
 
 ax = gca;
 ax.YDir = 'reverse';
+title(['Shortest path between island ', num2str(params.path_btwn_ids(1)), ...
+    ' and island ', num2str(params.path_btwn_ids(2))])
 ylim([0 params.map_size_rows+1])
 xlim([0 params.map_size_cols+1])
 legend('water', 'land', 'beach', 'path', 'Location', 'eastoutside')

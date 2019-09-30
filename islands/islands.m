@@ -6,10 +6,11 @@
 
 clear; clc; close all;
 
-params.map_size_rows = 20;
-params.map_size_cols = 15;
+params.map_size_rows = 25;
+params.map_size_cols = 20;
 params.island_size   = 3;
-params.num_islands   = 5;
+params.num_islands   = 4;
+params.path_btwn_ids = [2, 4];
 
 % 4 connected neighbors
 params.neighbors = ...
@@ -34,7 +35,9 @@ while (map_invalid)
 end
 
 perimeters    = getPerimeters(map, island_points, params);
-shortest_path = shortestPath([2,4], graph, params);
+shortest_path = shortestPath(params.path_btwn_ids, graph, params);
 plotMap(map, perimeters, shortest_path, params);
+
+print('imgs/shortest_path', '-dpng');
 
 
