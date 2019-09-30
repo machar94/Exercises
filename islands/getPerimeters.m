@@ -6,7 +6,6 @@ function [all_perimeters] = getPerimeters(map, island_points, params)
 import java.util.LinkedList
 q = LinkedList();
 
-
 % visited is a loaded boolean representing both
 % 1. The location on the map is currently in the queue OR
 % 2. The location on the map has been expanded in the BFS

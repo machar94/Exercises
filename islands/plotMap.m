@@ -1,4 +1,4 @@
-function [] = plotMap(map, perimeters, params)
+function [] = plotMap(map, perimeters, shortest_path, params)
 %PLOTMAP Generates a scatter plot
 
 [X, Y]         = meshgrid(1:params.map_size_rows, 1:params.map_size_cols);
@@ -14,12 +14,15 @@ scatter(col_i, row_i, 50, 'filled', 'g');
 % Plot perimeter
 scatter(perimeters(:,2), perimeters(:,1), 50, 'filled', 'r');
 
+% Plot shortest path
+% Start and end of path are land
+scatter(shortest_path(:,2), shortest_path(:,1), 50, 'filled', 'm');
 
 ax = gca;
 ax.YDir = 'reverse';
 ylim([0 params.map_size_rows+1])
 xlim([0 params.map_size_cols+1])
-legend('water', 'land', 'beach', 'Location', 'eastoutside')
+legend('water', 'land', 'beach', 'path', 'Location', 'eastoutside')
 
 end
 

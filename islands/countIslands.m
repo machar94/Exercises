@@ -1,4 +1,4 @@
-function [counted_islands, island_points] = countIslands(map,params)
+function [counted_islands, island_points, graph] = countIslands(map, graph, params)
 %COUNTISLANDS Returns the number of islands in the map
 % Problem is similar to the number of connected components search
 
@@ -39,6 +39,7 @@ for i = 1:numel(map)
         % BFS search
         while(q.size() > 0)
             coord = q.remove();
+            graph(coord(1), coord(2)).island_id = counted_islands + 1;
 
             % Mark cell as visited
             visited(coord(1), coord(2)) = 1;
