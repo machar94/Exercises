@@ -10,3 +10,4 @@ $ ./kdtree <points#.txt>
 Matlab implementation of a collection of algorithms, used to solve the following problems:
   1. Count the number of strongly connected components (BFS)
   2. Find the shortest path between two connected components (BFS)
+  ![alt text](islands/imgs/shortest_path.png "Shortest path between two islands")
