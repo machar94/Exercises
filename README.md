@@ -11,3 +11,8 @@ Matlab implementation of a collection of algorithms, used to solve the following
   1. Count the number of strongly connected components (BFS)
   2. Find the shortest path between two connected components (BFS)
   ![alt text](islands/imgs/shortest_path.png "Shortest path between two islands")
+
+* _NNLS_:
+Various scripts implementing non-linear least squares solvers:
+  1. Example estimating parameters of an exponential function using Gauss-Newton
+  ![alt text](nnls/imgs/gauss_newton_example.png "Find optimal parameters via Gauss Newton")
