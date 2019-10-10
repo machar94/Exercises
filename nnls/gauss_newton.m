@@ -102,5 +102,5 @@ set(gca, 'fontsize', fsize);
 
 % Sets the camera view of the plot
 view(az, el);
-print('gauss_newton_example.png', '-dpng', '-r100');
+print('imgs/gauss_newton_example.png', '-dpng', '-r100');
 
